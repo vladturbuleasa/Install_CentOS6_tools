@@ -5,9 +5,9 @@ wget -nv -O /opt/gradle-${gradle_version}-all.zip https://services.gradle.org/di
 unzip /opt/gradle-${gradle_version}-all.zip -d /opt/gradle
 ln -s /opt/gradle/gradle-${gradle_version} /opt/gradle/latest
 touch /etc/profile.d/gradle.sh
-echo "export GRADLE_HOME=/opt/gradle/latest\nexport PATH=\$PATH:\$GRADLE_HOME/bin" > /etc/profile.d/gradle.sh
-export GRADLE_HOME=/opt/gradle/latest
-export PATH=$PATH:$GRADLE_HOME/bin
+echo 'export GRADLE_HOME=/opt/gradle/latest' >> /etc/profile.d/gradle.sh
+echo 'export PATH=$PATH:/opt/gradle/latest/bin' >> /etc/profile.d/gradle.sh
+chmod +x /etc/profile.d/gradle.sh
 . /etc/profile.d/gradle.sh
 # check installation
 gradle -v
