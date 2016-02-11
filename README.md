@@ -7,5 +7,6 @@ Install DevOps tools on CentOS 6.7
 4. Install Nexus Sonatype 2.x
 5. Install Jenkins with swarm plugin
 6. Install Jenkins Slave with swarm pluin
+7. Install SonarQube server
 
 NOTE: You will need root permision to run these scripts.
